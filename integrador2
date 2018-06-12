@@ -1,0 +1,143 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int choice;
+bool gameOn = true;
+while (gameOn != false)
+{
+cout << " PRODUCTO INTEGRADAR UNIDAD II \n Selecciona el programa que desea ejecutar con el numero correspondiente.\n";
+cout << " 1 - Valor Absoluto\n";
+cout << " 2 - Par o Impar Multiple\n";
+cout << " 3 - Sueldo de un trabajador\n";
+cout << " 4 - Salir\n";
+cout << " Introduce tu eleccion: ";
+
+cin >> choice;
+
+switch (choice)
+{
+case 1:
+cout << "Valor Absoluto!\n";
+{
+    int n1=0, va1=0;
+    float n2=0, va2=0;
+
+    cout <<"Algoritmo para calcular el valor absoluto"<< endl;
+    cout<< ""<< endl;
+    cout<< ""<< endl;
+    cout <<"Cual es el valor del numero entero?"<< endl;
+    cin >> n1;
+    cout<< ""<< endl;
+    cout<< ""<< endl;
+    cout<< "Cual es el valor del numero decimal?"<< endl;
+    cin >> n2;
+    cout<< ""<< endl;
+    cout<< ""<< endl;
+    if (n1<=-1&&n2<=-0.0)
+    {
+        va1=n1*-1;
+        va2=n2*-1;
+    }
+    else
+    {
+        va1=n1*1;
+        va2=n2*1;
+    }
+    cout<<"El valor absoluto del entero es: "<<va1<< "\n" "El valor absoluto del decimal es: "<<va2<< endl;
+    cout<<" "<< endl;
+    cout<<" "<< endl;
+    cout<<"Grupo: 207" "\n" "Garcia Gonzalez Jesus Andres" "\n" "Orozco Favela Sebastian Alexis"<< endl;
+}
+break;
+case 2:
+cout << "Par o Impar!\n";
+{
+   int N=0, R=0;
+   cout << "Algoritmo para saber si determinada cantidad de numeros son pares o impares"<< endl;
+   cout << " "<< endl;
+   while (R<=1)
+   {
+       cout << "Introduce un numero"<< endl;
+       cin >> N;
+       R=N%2;
+       if (R==0)
+       {
+           cout << "PAR"<< endl;
+       }
+       else
+       {
+           cout << "IMPAR"<< endl;
+       }
+       if (N<=0)
+       {
+
+           cout << "Fin de numeros"<< endl;
+           break;
+       }
+   }
+   cout << " "<< endl;
+   cout << "Grupo: 207 \n Garcia Gonzalez Jesus Andres \n Orozco Favela Sebastian Alexis";
+}
+break;
+case 3:
+cout << "Sueldo de un trabajador!\n";
+{
+    double pago=0;
+    int hrs=0, ct=0;
+    cout <<"Algoritmo para conocer el sueldo de un empleado por sus horas extras"<< endl;
+    cout<<""<< endl;
+    cout<<""<< endl;
+    cout <<"Introduce la categoria (1, 2, 3, 4)"<< endl;
+    cin >> ct;
+    cout<<""<< endl;
+    cout<<""<< endl;
+    cout <<"Cuantas horas trabajo?"<< endl;
+    cin >>hrs;
+    switch (ct)
+    {
+        case 1:
+        pago=83.55+hrs*30.55;
+        break;
+
+        case 2:
+            pago=93.55+hrs*37.60;
+            break;
+
+        case 3:
+            pago=103.55+hrs*48.90;
+            break;
+
+        case 4:
+            pago=113.55+hrs*65.50;
+            break;
+
+        default:
+        cout <<"Opcion no valida, vuelva a intentarlo"<< endl;
+        break;
+    }
+    cout<<""<< endl;
+    cout<<""<< endl;
+    cout <<"El trabajador gano: "<<pago<< " pesos extra"<< endl;
+    cout<<""<< endl;
+    cout<<""<< endl;
+    cout <<"Grupo: 207" "\n" "Garcia Gonzalez Jesus Andres" "\n" "Orozco Favela Sebastian Alexis"<< endl;
+}
+break;
+case 4:
+cout << "Fin del programa\n";
+cout <<"Grupo: 207" "\n" "Garcia Gonzalez Jesus Andres" "\n" "Orozco Favela Sebastian Alexis"<< endl;
+gameOn = false;
+break;
+default:
+cout << "Opcion invalida \n";
+cout << "Elige de nuevo\n";
+cin >> choice;
+break;
+}
+
+}
+return 0;
+}
